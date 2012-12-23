@@ -1,4 +1,5 @@
 require 'erb'
+require 'yaml'
 
 class Log
 
@@ -26,7 +27,7 @@ end
 
 class Ask
 
-	@@info = {}
+	@@info = YAML.load(File.read('private.yml'))
 
 	def self.install(name,&blk)
 		print "Install #{name}? #{"[ynq]".yellow} "
@@ -75,6 +76,10 @@ class Install
 		else
 			create_file name # Dir["templates/#{name}.*"]
 		end
+	end
+
+	def self.brew(name)
+
 	end
 
 	# def self.provides(filename)
