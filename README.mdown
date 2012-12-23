@@ -1,0 +1,7 @@
+
+# install
+
+run this:
+  git clone https://github.com/danbrooker/dotfiles.git ~/.dotfiles
+  cd ~/.dotfiles
+  script/bootstrap

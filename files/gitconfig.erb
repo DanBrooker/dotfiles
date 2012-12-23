@@ -1,0 +1,28 @@
+[user]
+	name = <%= Ask.info :full_name %> 
+	email = <%= Ask.info :email %>
+[github]
+	user = <%= Ask.info :github_user %> 
+	token = <%= Ask.info :github_token %> 
+[core]
+	editor = sublime -w
+[color]
+	ui = auto
+[credential]
+	helper = osxkeychain
+[alias]
+	co = checkout
+    promote = !$ZSH/bin/git-promote
+    wtf     = !$ZSH/bin/git-wtf
+    rank-contributers = !$ZSH/bin/git-rank-contributers
+    count   = !git shortlog -sn
+<% if Using.legit? %>
+	switch = !legit switch \"$@\"
+	branches = !legit branches
+	sprout = !legit sprout \"$@\"
+	unpublish = !legit unpublish \"$@\"
+	harvest = !legit harvest \"$@\"
+	sync = !legit sync \"$@\"
+	publish = !legit publish \"$@\"
+	graft = !legit graft \"$@\"
+<% end %>
