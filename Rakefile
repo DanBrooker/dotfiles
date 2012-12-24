@@ -25,10 +25,14 @@ task :uninstall do
 
 	Uninstall.homebrew
 	Uninstall.git
+	Uninstall.brew "hub"
+	Uninstall.rvm
 	Uninstall.oh_my_zsh
-	Uninstall.legit
-	Uninstall.file :gitconfig
-	Uninstall.file :gitignore
+	Uninstall.brew "legit"
+	Uninstall.file "gitconfig"
+	Uninstall.file "gitignore"
+	Uninstall.brew "mogenerator"
+	Uninstall.brew "ssh-copy-id"
 
 end
 
