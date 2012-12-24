@@ -55,6 +55,10 @@ class Using
 		puts "missing: #{method}"
 	end
 
+	def self.command?(command)
+       system("which #{ command} > /dev/null 2>&1")
+ 	end
+
 end
 
 # class Object # http://whytheluckystiff.net/articles/seeingMetaclassesClearly.html

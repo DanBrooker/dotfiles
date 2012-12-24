@@ -10,6 +10,7 @@ task :install do
 	Install.homebrew
 	Install.git
 	Install.brew "hub"
+	Install.rvm
 	Install.oh_my_zsh
 	Install.brew "legit"
 	Install.file "gitconfig"
