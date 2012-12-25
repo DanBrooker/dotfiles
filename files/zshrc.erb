@@ -28,9 +28,13 @@ then
   source ~/.localrc
 fi
 
+fpath=($DOT/functions $fpath)
+
+autoload -U $DOT/functions/*(:t)
+
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
 compinit
 
 # load every completion after autocomplete loads
-for config_file ($DOT/**/completion.zsh) source $config_file
+#for config_file ($DOT/**/completion.zsh) source $config_file
