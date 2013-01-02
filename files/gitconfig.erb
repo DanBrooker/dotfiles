@@ -12,12 +12,11 @@
 	helper = osxkeychain
 [alias]
 	co = checkout
-    promote = !$ZSH/bin/git-promote
-    wtf     = !$ZSH/bin/git-wtf
-    rank-contributers = !$ZSH/bin/git-rank-contributers
+    promote = !$DOT/bin/git-promote
+    wtf     = !$DOT/bin/git-wtf
+    rank-contributers = !$DOT/bin/git-rank-contributers
     count   = !git shortlog -sn
-<% if Using.legit? %>
-	switch = !legit switch \"$@\"
+<% if Using.command? "legit" %> switch = !legit switch \"$@\"
 	branches = !legit branches
 	sprout = !legit sprout \"$@\"
 	unpublish = !legit unpublish \"$@\"

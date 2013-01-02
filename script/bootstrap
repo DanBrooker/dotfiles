@@ -2,9 +2,4 @@
 #
 # bootstrap installs things.
 
-if [ $(uname -s) = "Darwin" ] # OSX 
-then
-	. script/homebrew
-fi
-
 rake install

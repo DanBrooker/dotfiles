@@ -43,8 +43,14 @@ class Ask
 	end
 
 	def self.info(key)
-		print "Enter #{key.to_s.gsub("_"," ").capitalize}: "
-		input = $stdin.gets.chomp
+		loaded = @@info[key.to_s]
+		puts loaded
+		if loaded.nil?
+			print "Enter #{key.to_s.gsub("_"," ").capitalize}: "
+			input = $stdin.gets.chomp
+		else
+			input = loaded
+		end
 	end
 
 end
@@ -52,7 +58,8 @@ end
 class Using
 
 	def method_missing(method)
-		puts "missing: #{method}"
+		#puts "missing: #{method}"
+		command = Using.command? method.chomp
 	end
 
 	def self.command?(command)

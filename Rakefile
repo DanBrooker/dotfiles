@@ -7,6 +7,7 @@ task :install do
 
 	puts "dotfiles install".yellow
 
+	Install.file "test"
 	Install.homebrew
 	Install.git
 	Install.brew "hub"
@@ -23,6 +24,7 @@ task :uninstall do
 
 	puts "dotfiles uninstall".yellow
 
+	Uninstall.file "test"
 	Uninstall.homebrew
 	Uninstall.git
 	Uninstall.brew "hub"
