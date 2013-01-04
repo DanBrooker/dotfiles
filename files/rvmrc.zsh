@@ -1,5 +1,5 @@
 rvmrc() { 
-	echo "rvm --create gemset use ruby-1.9.3" > .rvmrc
+	echo "rvm --create gemset use $rvm_ruby_string" > .rvmrc
 	cd ..
 	cd - 
 }
