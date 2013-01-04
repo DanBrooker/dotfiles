@@ -11,6 +11,7 @@ task :install do
 	Install.homebrew
 	Install.brew "git"
 	Install.brew "hub"
+	Install.file "gemrc"
 	Install.rvm
 	Install.ruby "1.9.3"
 	Install.oh_my_zsh
@@ -30,6 +31,7 @@ task :uninstall do
 	Uninstall.homebrew
 	Uninstall.brew "git"
 	Uninstall.brew "hub"
+	Uninstall.file "gemrc"
 	Uninstall.rvm
 	UnInstall.ruby "1.9.3"
 	Uninstall.oh_my_zsh
