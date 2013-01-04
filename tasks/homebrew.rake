@@ -1,7 +1,7 @@
 
 class Install
 
-	def self.homebrew
+	def self.homebrew(args = {})
 		if Using.command?("brew")
 			Log.found "brew"
 			Log.skip "homebrew"
@@ -14,7 +14,7 @@ class Install
 		end
 	end
 
-	def self.brew(name)
+	def self.brew(name,args = {})
 		#puts "BREW #{name}"
 		if Using.command?(name)
 			Log.found name

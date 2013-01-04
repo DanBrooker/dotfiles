@@ -29,7 +29,17 @@ class Ask
 
 	@@info = YAML.load(File.read('private.yml'))
 
-	def self.install(name,&blk)
+	def self.install(name,args={},&blk)
+
+		name = name.to_s
+
+		if not args["ask"].nil?
+			if args["ask"] == false
+				yield blk
+				return
+			end
+		end
+
 		print "Install #{name}? #{"[ynq]".yellow} "
 		case $stdin.gets.chomp
 	    when 'y'

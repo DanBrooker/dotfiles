@@ -1,4 +1,5 @@
 
+
 class Install
 
 	def self.rvm(args = {})
@@ -14,8 +15,9 @@ class Install
 		end
 	end
 
-	def self.ruby(version,args = {})
-
+	def self.ruby_gem(name,args = {})
+		version = args["version"]
+		puts system("gem install #{name} #{"-v #{version}" if not version.nil? }")
 	end
 
 end

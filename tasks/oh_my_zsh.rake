@@ -4,7 +4,7 @@ class Install
 
 	#provides :zshrc
 
-	def self.oh_my_zsh
+	def self.oh_my_zsh(args = {})
 		if File.exist?(File.join(ENV['HOME'], ".oh-my-zsh"))
 			Log.found ".oh-my-zsh"
 			Log.skip "oh_my_zsh"

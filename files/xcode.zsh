@@ -13,6 +13,6 @@ xcode() {
 	then
 		open $project
 	else
-		echo "Couldn't find xocde workspace or project"
+		echo "Couldn't find xcode workspace or project"
 	fi
 }

@@ -9,15 +9,17 @@ task :install do
 
 	Install.file "test"
 	Install.homebrew
-	Install.git
+	Install.brew "git"
 	Install.brew "hub"
 	Install.rvm
+	Install.ruby "1.9.3"
 	Install.oh_my_zsh
 	Install.brew "legit"
 	Install.file "gitconfig"
 	Install.file "gitignore"
 	Install.brew "mogenerator"
 	Install.brew "ssh-copy-id"
+	Install.cocoapods
 end
 
 task :uninstall do
@@ -26,15 +28,17 @@ task :uninstall do
 
 	Uninstall.file "test"
 	Uninstall.homebrew
-	Uninstall.git
+	Uninstall.brew "git"
 	Uninstall.brew "hub"
 	Uninstall.rvm
+	UnInstall.ruby "1.9.3"
 	Uninstall.oh_my_zsh
 	Uninstall.brew "legit"
 	Uninstall.file "gitconfig"
 	Uninstall.file "gitignore"
 	Uninstall.brew "mogenerator"
 	Uninstall.brew "ssh-copy-id"
+	Uninstall.cocoapods
 
 end
 
