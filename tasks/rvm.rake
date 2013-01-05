@@ -14,8 +14,9 @@ class Install
 		end
 	end
 
-	def self.ruby(version,args = {})
-
+	def self.ruby_rvm(version,args ={})
+		system "rvm install #{version}"
+		system "rvm use #{version} --default" if args["default"]
 	end
 
 end
