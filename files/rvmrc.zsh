@@ -1,5 +1,5 @@
 rvmrc() { 
-	echo "rvm --create gemset use $rvm_ruby_string" > .rvmrc
+	echo "rvm --create gemset use $RUBY_VERSION" > .rvmrc
 	cd ..
 	cd - 
 }

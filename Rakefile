@@ -13,7 +13,7 @@ task :install do
 	Install.brew "hub"
 	Install.file "gemrc"
 	Install.rvm
-	Install.ruby "1.9.3"
+	Install.ruby "1.9.3", :default => true
 	Install.oh_my_zsh
 	Install.brew "legit"
 	Install.file "gitconfig"
