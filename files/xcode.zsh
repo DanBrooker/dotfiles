@@ -1,18 +1,19 @@
 xcode() {
 	# find a workspace and open it
-	workspace=`ls */*.xcworkspace | head -1`
+	workspace=`ls | grep xcworkspace | head -1 || echo ""`
 	# or find a xcode proj
-	project=`ls */*.xcproj | head -1`
+	project=`ls | grep xcodeproj | head -1 || echo ""`
 
-	if [ -d $workspace ]
+	if [ -e "$workspace" ]
 	then
-		open $workspace
-		exit 0
-	fi
-	if [ -d $project ]
-	then
-		open $project
+		`open "$workspace"`
 	else
-		echo "Couldn't find xcode workspace or project"
+		if [ -e "$project" ]
+		then
+			`open $"project"`
+		else
+			echo "Couldn't find xcode workspace or project"
+		fi
 	fi
+	
 }

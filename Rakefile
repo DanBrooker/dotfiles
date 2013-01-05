@@ -9,17 +9,28 @@ task :install do
 
 	Install.file "test"
 	Install.homebrew
+
+	# git
 	Install.brew "git"
-	Install.brew "hub"
-	Install.file "gemrc"
-	Install.rvm
-	Install.ruby "1.9.3", :default => true
+
+	# zshell
 	Install.oh_my_zsh
+
+	# more git, # do dependency management for this atm
+	Install.brew "hub"
 	Install.brew "legit"
 	Install.file "gitconfig"
 	Install.file "gitignore"
-	Install.brew "mogenerator"
 	Install.brew "ssh-copy-id"
+
+	#ruby
+	Install.file "gemrc"
+	Install.rvm
+	Install.ruby "1.9.3", :default => true
+
+	# obj-c
+	Install.brew "mogenerator"
+	Install.brew "appledoc"
 	Install.cocoapods
 end
 
