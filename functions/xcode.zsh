@@ -10,7 +10,7 @@ xcode() {
 	else
 		if [ -e "$project" ]
 		then
-			`open $"project"`
+			`open "$project"`
 		else
 			echo "Couldn't find xcode workspace or project"
 		fi
