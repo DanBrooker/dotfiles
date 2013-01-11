@@ -22,7 +22,7 @@ class Install
 
 	def self.ruby(name,args = {})
 
-		if Using.command "rvm"
+		if Using.command? "rvm"
 			self.ruby_rvm(name, args)
 		end
 		
