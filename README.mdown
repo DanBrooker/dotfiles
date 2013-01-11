@@ -1,7 +1,13 @@
+# Basic Install
 
-# install
+```
+git clone https://github.com/DanBrooker/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
 
-run this:
-  git clone https://github.com/danbrooker/dotfiles.git ~/.dotfiles
-  cd ~/.dotfiles
-  script/bootstrap
+optionally:
+  cp private.yml.example private.yml
+  
+script/bootstrap
+```
+
+    
