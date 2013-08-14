@@ -16,6 +16,7 @@ class Install
 	# end
 
 	def self.ruby_gem(name,args = {})
+		# maybe check if already installed
 		version = args["version"]
 		puts system("gem install #{name} #{"-v #{version}" if not version.nil? }")
 	end

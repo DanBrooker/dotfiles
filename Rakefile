@@ -7,7 +7,6 @@ task :install do
 
 	puts "dotfiles install".yellow
 
-	Install.file "test"
 	Install.homebrew
 
 	# git
@@ -24,9 +23,8 @@ task :install do
 	Install.brew "ssh-copy-id"
 
 	#ruby
-	Install.file "gemrc"
 	Install.rvm
-	Install.ruby "1.9.3", :default => true
+	Install.ruby "2.0.0", :default => true
 
 	# obj-c
 	Install.brew "mogenerator"
@@ -34,25 +32,26 @@ task :install do
 	Install.cocoapods
 end
 
-task :uninstall do
+# thinking about having a list of things installed by ths script, the uninstall here could be a little too agressive
+# task :uninstall do
 
-	puts "dotfiles uninstall".yellow
+# 	puts "dotfiles uninstall".yellow
 
-	Uninstall.file "test"
-	Uninstall.homebrew
-	Uninstall.brew "git"
-	Uninstall.brew "hub"
-	Uninstall.file "gemrc"
-	Uninstall.rvm
-	UnInstall.ruby "1.9.3"
-	Uninstall.oh_my_zsh
-	Uninstall.brew "legit"
-	Uninstall.file "gitconfig"
-	Uninstall.file "gitignore"
-	Uninstall.brew "mogenerator"
-	Uninstall.brew "ssh-copy-id"
-	Uninstall.cocoapods
+# 	Uninstall.file "test"
+# 	Uninstall.homebrew
+# 	Uninstall.brew "git"
+# 	Uninstall.brew "hub"
+# 	Uninstall.file "gemrc"
+# 	Uninstall.rvm
+# 	UnInstall.ruby "1.9.3"
+# 	Uninstall.oh_my_zsh
+# 	Uninstall.brew "legit"
+# 	Uninstall.file "gitconfig"
+# 	Uninstall.file "gitignore"
+# 	Uninstall.brew "mogenerator"
+# 	Uninstall.brew "ssh-copy-id"
+# 	Uninstall.cocoapods
 
-end
+# end
 
 task :default => 'install'

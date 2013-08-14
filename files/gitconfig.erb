@@ -5,17 +5,17 @@
 	user = <%= Ask.info :github_user %> 
 	token = <%= Ask.info :github_token %> 
 [core]
-	editor = sublime -w
+	editor = mate -w
 [color]
 	ui = auto
 [credential]
 	helper = osxkeychain
 [alias]
 	co = checkout
-    promote = !$DOT/bin/git-promote
-    wtf     = !$DOT/bin/git-wtf
-    rank-contributers = !$DOT/bin/git-rank-contributers
-    count   = !git shortlog -sn
+  promote = !$DOT/bin/git-promote
+  wtf     = !$DOT/bin/git-wtf
+  rank-contributers = !$DOT/bin/git-rank-contributers
+  count   = !git shortlog -sn
 <% if Using.command? "legit" %> switch = !legit switch \"$@\"
 	branches = !legit branches
 	sprout = !legit sprout \"$@\"

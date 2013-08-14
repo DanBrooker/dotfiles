@@ -1,7 +1,0 @@
-[user]
-	name = <%= Ask.info :full_name %> 
-	email = <%= Ask.info :email %>
-<% if Using.command? :git %> [github]
-	user = <%= Ask.info :github_user %> 
-	token = <%= Ask.info :github_token %> 
-<% end %>
