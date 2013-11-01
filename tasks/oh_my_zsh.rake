@@ -30,7 +30,7 @@ class Install
 		# end
 	end
 
-	private
+	protected
 
 	def reload_terminal
 		%Q{source $HOME/.zshrc}

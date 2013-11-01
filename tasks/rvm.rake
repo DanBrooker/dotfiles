@@ -9,7 +9,7 @@ class Install
 		else
 			Ask.install :rvm do
 				Log.install :rvm
-	      		system %Q{\curl -L https://get.rvm.io | bash -s stable}
+	      		system %Q{curl -L https://get.rvm.io | bash -s stable}
 			end
 		end
 	end
