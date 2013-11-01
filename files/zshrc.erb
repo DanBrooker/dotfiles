@@ -3,7 +3,7 @@ ZSH=$HOME/.oh-my-zsh
 DOT=$HOME/.dotfiles
 
 ZSH_THEME="gallois"
-export EDITOR=sublime
+export EDITOR=mate
 
 alias zshconfig="$EDITOR ~/.zshrc"
 alias ohmyzsh="$EDITOR ~/.oh-my-zsh"
@@ -37,6 +37,8 @@ autoload -U $DOT/functions/*(:t)
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
 compinit
+
+DISABLE_CORRECTION="true"
 
 # load every completion after autocomplete loads
 #for config_file ($DOT/**/completion.zsh) source $config_file
