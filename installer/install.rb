@@ -4,23 +4,23 @@ require 'yaml'
 class Log
 
 	def self.skip(name)
-		puts "\tskipped\t#{name.magenta}"
+		puts "\tskipped\t#{name.to_s.magenta}"
 	end
 
 	def self.install(name)
-		puts "\tinstall\t#{name.yellow}"
+		puts "\tinstall\t#{name.to_s.yellow}"
 	end
 
 	def self.create(name)
-		puts "\tcreate\t#{name.green}"
+		puts "\tcreate\t#{name.to_s.green}"
 	end
 
 	def self.found(name)
-		puts "\tfound\t#{name.bold}"
+		puts "\tfound\t#{name.to_s.bold}"
 	end
 
 	def self.link(name)
-		puts "\tlink\t#{name.cyan}"
+		puts "\tlink\t#{name.to_s.cyan}"
 	end
 
 end
