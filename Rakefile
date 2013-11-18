@@ -32,6 +32,9 @@ task :install do
 	Install.cocoapods
 end
 
+task :install_fish do
+  Install.fish
+end
 # thinking about having a list of things installed by ths script, the uninstall here could be a little too agressive
 # task :uninstall do
 

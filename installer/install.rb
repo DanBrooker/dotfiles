@@ -86,16 +86,16 @@ end
 
 class Install
 
-	def self.file(name)
-		dotname = "."+name
+	def self.file(name,destination)
+		dotname = destination.nil? ? name : destination
 		if File.exist?(File.join(ENV['HOME'], dotname))
 			#print "\tfound\t.zshrc\nre-"
 			Log.found dotname
 			Ask.install dotname do
-				create_file name  #Dir["templates/#{name}.*"]
+				create_file name,destination  #Dir["templates/#{name}.*"]
 			end
 		else
-			create_file name # Dir["templates/#{name}.*"]
+			create_file name,destination # Dir["templates/#{name}.*"]
 		end
 	end
 
@@ -126,12 +126,12 @@ class Install
 
 	private
 
-	def self.create_file(name)
-		dotname = "."+name
+	def self.create_file(name,destination)
+		dotname = destination.nil? ? name : destination
 		filename = Dir["files/#{name}*"].first
 		filepath = "#{ENV['HOME']}/#{dotname}"
 
-		#puts "writing #{filename} to #{filepath}"
+    # puts "writing #{filename} to #{filepath}"
 		
 		if filename =~ /.erb$/
 			Log.create(dotname)
